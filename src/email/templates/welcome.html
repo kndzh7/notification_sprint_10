@@ -1,0 +1,54 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+<tr>
+  <td class="email-body" width="570" cellpadding="0" cellspacing="0">
+    <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+      <!-- Body content -->
+      <tr>
+        <td class="content-cell">
+          <div class="f-fallback">
+            <h1>Добро пожаловать, {{ user_name }}!</h1>
+            <p>Спасибо, что попробовали {{ company_name }}. Мы очень рады видеть вас в нашем сервисе. Чтобы получить
+              максимальную отдачу от {{ company_name }}а, выполните следующий основной шаг:</p>
+
+            <p>Для справки, вот ваши данные для входа:</p>
+            <table class="attributes" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+              <tr>
+                <td class="attributes_content">
+                  <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                      <td class="attributes_item">
+                        <span class="f-fallback"><strong>Логин: </strong> {{ login }}</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="attributes_item">
+                        <span class="f-fallback"><strong>Пароль: </strong> {{ password }}</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <p>
+              Если у вас есть какие-либо вопросы, не стесняйтесь <a href="mailto:{{ company_email }}">обращаться в службу поддержки.</a> (Мы отвечаем молниеносно.)
+            </p>
+            <!-- Sub copy -->
+            <table class="body-sub" role="presentation">
+              <tr>
+                <td>
+                  <p class="f-fallback sub">
+                    Если у вас возникли проблемы с кнопкой выше, скопируйте и вставьте URL-адрес ниже в ваш веб-браузер.
+                  </p>
+                  <p class="f-fallback sub"> {{ action_url }}</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+{% endblock %}
